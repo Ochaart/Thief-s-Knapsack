@@ -1,12 +1,8 @@
-const pricePerLbs = (lbs, price) => {
-  return price / lbs
-}
-
 const knapsack = (lbs, goods) => {
   let bestToWorstRatio = [];
   for (let i = 0; i < goods.length; i++) {
     let good = {};
-    let ratio = pricePerLbs(goods[i].lbs, goods[i].price);
+    let ratio = goods[i].price / goods[i].lbs;
     good.name = goods[i].name;
     good.ratio = ratio;
     good.lbs = goods[i].lbs;
